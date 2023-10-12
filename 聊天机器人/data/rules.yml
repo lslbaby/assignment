@@ -1,0 +1,26 @@
+version: "3.1"
+
+rules:
+
+- rule: ## 用户查询订单状态
+  steps:
+  - intent: order_status
+  - action: utter_query_order_status
+
+- rule: ## 查询服务中心
+  steps:
+  - intent: service_center
+  - action: utter_suggest_alternatives
+- rule: ## 提供备选方案
+  steps:
+  - intent: defective_product
+  - action: utter_handle_defective_product
+- rule: ## 自我介绍
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: ## 处理有问题的产品
+  steps:
+  - intent: alternative_solutions
+  - action: utter_suggest_alternatives
+

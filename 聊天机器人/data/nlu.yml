@@ -1,0 +1,41 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+- intent: order_status
+  examples: |
+    - How can I check the status of my order?
+    - Tell me about my Casper R order.
+    - Order status for Casper S mobile.
+    - I need information on my product order.
+
+- intent: defective_product
+  examples: |
+    - My product is defective.
+    - I received a faulty Casper R device.
+    - My Casper S is not working.
+    - Help with a defective product.
+
+- intent: service_center
+  examples: |
+    - Nearest service center location.
+    - Where can I find a repair center?
+    - Service center address.
+    - I need to repair my device.
+
+- intent: alternative_solutions
+  examples: |
+    - I want to talk to a human.
+    - This is not helping, connect me to a supervisor.
+    - Give me other options.
+    - Can I get email support?
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

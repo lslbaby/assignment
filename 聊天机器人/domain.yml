@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - order_status
+  - defective_product
+  - service_center
+  - alternative_solutions
+
+
+
+
+
+responses:
+  utter_query_order_status:
+    - text: "Your order status is: CR/CS]4562[1-4]ERS20/ERS21."
+    - text: "Your order status is: CR/CS]1895[1-4]ERS20/ERS21."
+    - text: "Your order status is: CR/CS]2792[1-4]ERS20/ERS21."
+  utter_handle_defective_product:
+    - text: "I'm sorry to hear about the issue with your product. If it matches our criteria, we will replace it."
+  utter_provide_service_center_info:
+    - text: "The nearest service center is located at 123 Service St, City."
+    - text: "The nearest service center is located at 789 Fix Ave, Village."
+  utter_suggest_alternatives:
+    - text: "I understand you have concerns. You can email us at support@example.com for detailed queries."
+    - text: "If you prefer phone support, please provide your phone number, and we will have a human executive call you."
+  utter_greet:
+    - text: "Hello! I am the CasperBot, here to assist you with Casper R and Casper S mobile devices. How can I help you today?"
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
